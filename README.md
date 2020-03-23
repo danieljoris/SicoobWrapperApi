@@ -1,2 +1,2 @@
 # SicoobWrapperApi-v1
-Biblioteca wrapper da API do Sicoob na versão 1. 
+Biblioteca em C# que encapsula a API Sicoob | Open Banking. 
