@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SicoobWrapperApi.BankCollection.Interfaces.Movement.Result
+namespace SicoobWrapperApi.BankCollection.Interfaces.Movement.Response
 {
-    public class BeneficiaryMovementResult
+    public class BeneficiaryMovementResponse
     {
-        public BeneficiaryMovementResult()
+        public BeneficiaryMovementResponse()
         {
         }
 
-        public BeneficiaryMovementResult(string message, int requestCode)
+        public BeneficiaryMovementResponse(string message, int requestCode)
         {
             Message = message;
             RequestCode = requestCode;

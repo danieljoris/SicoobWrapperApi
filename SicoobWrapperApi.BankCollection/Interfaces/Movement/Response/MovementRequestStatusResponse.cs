@@ -3,9 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SicoobWrapperApi.BankCollection.Interfaces.Movement.Result
+namespace SicoobWrapperApi.BankCollection.Interfaces.Movement.Response
 {
-    public class MovementRequestStatusResult
+    public class MovementRequestStatusResponse
     {
         /// <summary>
         /// Quantidade Total de Registos encontrados para a movimentação solicitada.

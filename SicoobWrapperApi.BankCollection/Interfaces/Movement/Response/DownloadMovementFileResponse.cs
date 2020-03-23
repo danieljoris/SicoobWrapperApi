@@ -1,14 +1,14 @@
 ﻿using Refit;
 
-namespace SicoobWrapperApi.BankCollection.Interfaces.Movement.Result
+namespace SicoobWrapperApi.BankCollection.Interfaces.Movement.Response
 {
-    public class DownloadMovementFileResult
+    public class DownloadMovementFileResponse
     {
-        public DownloadMovementFileResult()
+        public DownloadMovementFileResponse()
         {
         }
 
-        public DownloadMovementFileResult(string file, string fileName)
+        public DownloadMovementFileResponse(string file, string fileName)
         {
             File = file;
             FileName = fileName;

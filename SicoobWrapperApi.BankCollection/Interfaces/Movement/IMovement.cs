@@ -1,5 +1,6 @@
 ﻿using Refit;
-using SicoobWrapperApi.BankCollection.Interfaces.Movement.Result;
+using SicoobWrapperApi.BankCollection.Interfaces.Movement.Body;
+using SicoobWrapperApi.BankCollection.Interfaces.Movement.Response;
 using System.Threading.Tasks;
 
 namespace SicoobWrapperApi.BankCollection.Interfaces
@@ -14,7 +15,7 @@ namespace SicoobWrapperApi.BankCollection.Interfaces
         /// </summary>
         /// <param name="requestCode">Código da solicitação que deseja consultar a quantidade de arquivos que serão gerados.</param>
         [Get("/boletos/solicitacoes/movimentacao?codigoSolicitacao={codigoSolicitacao}")]
-        Task<MovementRequestStatusResult> GetMovimentRequestStatus([AliasAs("codigoSolicitacao")]int requestCode);
+        Task<MovementRequestStatusResponse> GetMovimentRequestStatusAsync([AliasAs("codigoSolicitacao")]int requestCode);
 
         /// <summary>
         /// Serviço para solicitar a movimentação da carteira de cobrança registrada para beneficiário informado. 
@@ -27,7 +28,7 @@ namespace SicoobWrapperApi.BankCollection.Interfaces
         /// </summary>
         /// <remarks>As consultas estão limitadas em um período máximo de 2 dias.</remarks>
         [Post("/boletos/solicitacoes/movimentacao")]
-        Task<BeneficiaryMovementResult> GetBeneficiaryRegisteredCollectionMoviment([Body] BeneficiaryMovimentBody body);
+        Task<BeneficiaryMovementResponse> GetBeneficiaryRegisteredCollectionMovimentAsync([Body] BeneficiaryMovimentBody body);
 
         /// <summary>
         /// Serviço para obter um arquivo de movimentação.
@@ -36,6 +37,6 @@ namespace SicoobWrapperApi.BankCollection.Interfaces
         /// <param name="fileId">ID do arquivo para download.</param>
         /// <returns></returns>
         [Get("/boletos/movimentacao-download?codigoSolicitacao={codigoSolicitacao}&idArquivo={idArquivo}")]
-        Task<DownloadMovementFileResult> DownloadMovimentFile([AliasAs("codigoSolicitacao")]int requestCode, [AliasAs("idArquivo")]int fileId);
+        Task<DownloadMovementFileResponse> DownloadMovimentFileAsync([AliasAs("codigoSolicitacao")]int requestCode, [AliasAs("idArquivo")]int fileId);
     }
 }
