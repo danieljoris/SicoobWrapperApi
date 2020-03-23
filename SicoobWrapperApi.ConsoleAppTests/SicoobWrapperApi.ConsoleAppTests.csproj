@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SicoobWrapperApi\SicoobWrapperApi.BankCharges.csproj" />
+    <ProjectReference Include="..\SicoobWrapperApi\SicoobWrapperApi.BankCollection.csproj" />
   </ItemGroup>
 
 </Project>

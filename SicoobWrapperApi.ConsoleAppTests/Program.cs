@@ -10,7 +10,6 @@ namespace SicoobWrapperApi.ConsoleAppTests
         async static void Main(string[] args)
         {
             var sicoobApi = RestService.For<IBoleto>("https://sandbox.sicoob.com.br/cobranca-bancaria/");
-
             var boleto = new Boleto();
 
             var teste = await sicoobApi.AddBoleto(boleto);
